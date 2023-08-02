@@ -1,0 +1,24 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Set Your Goal</h4>
+          <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="set-goal">Enter Your Goal:</label>
+              <input type="text" name="set-goal" id="set-goal" class="form-control">
+            </div>
+              <br>
+            <button type="submit" class="btn btn-primary">Save</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
